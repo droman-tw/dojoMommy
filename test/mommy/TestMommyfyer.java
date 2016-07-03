@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by droman on 6/29/16.
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class TestMommyfyer {
 
     private Mommyfyer mommy;
+
 
     @Before
     public void setUp(){
@@ -63,9 +65,21 @@ public class TestMommyfyer {
     public void shouldReturnHmommysWhenInputHis(){
         String expectedResult = "hmommys";
 
-
         assertEquals(expectedResult, mommy.getMommyfyed("his"));
 
     }
+
+    @Test
+    public void shouldReturnhHmommyrWhenInputIsHear(){
+        String expectedResult = "hmommyr";
+
+        assertEquals(expectedResult, mommy.getMommyfyed("hear"));
+    }
+
+    @Test
+    public void  shouldNotMommifyWhenInputHasLessThan30PercentCountOfVowels(){
+        assertTrue(false);
+    }
+
 
 }
